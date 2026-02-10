@@ -103,7 +103,7 @@ body {
 .back {
   transform: rotateY(180deg);
   background-color: #fff;
-  border: 2px solid #f0f0f0;
+  border: 2px solid rgb(240, 240, 240);
 }
 .back .inner {
   grid-template-rows: 1fr 2fr 1fr 2fr 14fr 1fr 1fr;
@@ -134,7 +134,7 @@ body {
   font-size: 1.2em;
 }
 .back .info i:before {
-  background: linear-gradient(40deg, #32292F, #438af3);
+  background: linear-gradient(40deg, #32292F, rgb(67, 138, 243));
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
