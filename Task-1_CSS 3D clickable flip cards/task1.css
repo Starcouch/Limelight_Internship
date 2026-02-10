@@ -25,6 +25,7 @@ body {
   margin: 1em;
   perspective: 1500px;
 }
+
 .card .content {
   position: relative;
   width: 100%;
@@ -36,6 +37,7 @@ body {
 .more {
   display: none;
 }
+
 .more:checked ~ .content {
   transform: rotateY(180deg);
 }
@@ -51,6 +53,7 @@ body {
   transform-style: preserve-3d;
   border-radius: 6px;
 }
+
 .front .inner,
 .back .inner {
   height: 100%;
@@ -59,27 +62,33 @@ body {
   transform: translateZ(80px) scale(0.94);
 }
 
+/* ---------- FRONT ---------- */
+
 .front {
   background-color: #fff;
   background-size: cover;
-  background-position: center center;
+  background-position: center;
+  position: relative;
 }
-.front:after {
+
+.front::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
+  inset: 0;
   border-radius: 6px;
-  backface-visibility: hidden;
-  background: linear-gradient(40deg, rgba(67, 138, 243, 0.7), rgba(255, 242, 166, 0.7));
+  background: linear-gradient(
+    40deg,
+    rgba(67, 138, 243, 0.7),
+    rgba(255, 242, 166, 0.7)
+  );
+  pointer-events: none; /* FIXED */
 }
+
 .front .inner {
   grid-template-rows: 5fr 1fr 1fr 2fr 1fr;
   justify-items: center;
 }
+
 .front h2 {
   grid-row: 2;
   margin-bottom: 0.3em;
@@ -89,28 +98,33 @@ body {
   font-weight: 500;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 }
+
 .front .rating {
   grid-row: 3;
   color: rgba(255, 255, 255, 0.8);
   font-size: 14px;
   display: flex;
-  flex-flow: row nowrap;
 }
+
 .front .rating i {
   margin: 0 1px;
 }
+
+/* ---------- BACK ---------- */
 
 .back {
   transform: rotateY(180deg);
   background-color: #fff;
   border: 2px solid rgb(240, 240, 240);
 }
+
 .back .inner {
-  grid-template-rows: 1fr 2fr 1fr 2fr 14fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr 2fr 1fr 1fr 1fr; /* FIXED */
   grid-template-columns: repeat(4, auto);
-  grid-column-gap: 0.8em;
+  column-gap: 0.8em;
   justify-items: center;
 }
+
 .back .info {
   position: relative;
   display: flex;
@@ -118,7 +132,8 @@ body {
   color: #32292F;
   grid-row: 3;
 }
-.back .info:not(:first-of-type):before {
+
+.back .info:not(:first-of-type)::before {
   content: "";
   position: absolute;
   left: -0.9em;
@@ -126,21 +141,26 @@ body {
   width: 1px;
   background-color: #ccc;
 }
+
 .back .info span {
   font-size: 2em;
   font-weight: 700;
 }
+
 .back .info i {
   font-size: 1.2em;
 }
-.back .info i:before {
+
+.back .info i::before {
   background: linear-gradient(40deg, #32292F, rgb(67, 138, 243));
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
+
 .back .info .icon {
   margin-left: 0.3em;
 }
+
 .back .info .icon span {
   display: block;
   margin-top: -0.25em;
@@ -148,38 +168,43 @@ body {
   font-weight: 600;
   white-space: nowrap;
 }
+
 .back .description {
   grid-row: 5;
-  grid-column: 1/-1;
+  grid-column: 1 / -1;
   font-size: 0.86em;
-  border-radius: 5px;
   font-weight: 600;
   line-height: 1.4em;
-  overflow: auto;
   color: #32292F;
-  padding-right: 10px;
   justify-self: stretch;
   text-align: left;
 }
+
+/* FIXED selector bug */
 .back .author,
-.back .Rating {
+.back .price {
   font-weight: 600;
   color: #32292F;
   grid-row: 1;
   font-size: 0.86em;
 }
+
 .back .author {
-  grid-column: 1/3;
+  grid-column: 1 / 3;
   justify-self: left;
 }
+
 .back .price {
-  grid-column: 3/-1;
+  grid-column: 3 / -1;
   justify-self: right;
 }
+
 .back .button {
-  grid-column: 1/-1;
+  grid-column: 1 / -1;
   justify-self: center;
 }
+
+/* ---------- BUTTON ---------- */
 
 .button {
   grid-row: -1;
@@ -193,32 +218,36 @@ body {
   line-height: 2.9em;
   min-width: 3em;
   background-color: transparent;
-  border: solid 2px #fff;
+  border: 2px solid #fff;
   color: #fff;
   border-radius: 4px;
   text-align: center;
-  left: 50%;
   backface-visibility: hidden;
   transition: 0.3s ease-in-out;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
+
 .button:hover {
   background-color: #fff;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
   text-shadow: none;
   color: #32292F;
 }
+
 .button.return {
   line-height: 3em;
   color: #32292F;
   border-color: #32292F;
   text-shadow: none;
 }
+
 .button.return:hover {
   background-color: #32292F;
   color: #fff;
   box-shadow: none;
 }
+
+/* ---------- SCROLLBAR ---------- */
 
 ::-webkit-scrollbar {
   width: 5px;
