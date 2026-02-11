@@ -182,7 +182,7 @@ body {
 
 /* FIXED selector bug */
 .back .author,
-.back .price {
+.back .Rating {
   font-weight: 600;
   color: #32292F;
   grid-row: 1;
@@ -194,7 +194,7 @@ body {
   justify-self: left;
 }
 
-.back .price {
+.back .Rating {
   grid-column: 3 / -1;
   justify-self: right;
 }
