@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #32292F;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* PARALLAX IMAGE SECTIONS */
+.parallax {
+  position: relative;
+  height: 120vh;
+  background-size: cover;
+  background-position: center 0px;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dark overlay */
+.parallax::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(87, 83, 102,0.5);
+}
+
+/* STICKY TITLE */
+.sticky-title {
+  position: sticky;
+  top: 60%;
+  transform: translateY(-50%);
+  z-index: 2;
+  font-size: 3rem;
+  letter-spacing: 4px;
+  text-align: center;
+}
+/* INFO SECTION */
+.info {
+  padding: 100px 20%;
+  background: #32292F;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+/* BACKGROUNDS */
+.hero {
+  background-image: url("imgs/bigthree.jpg");
+}
+
+.naruto {
+  background-image: url("imgs/naruto.jpg");
+}
+
+.onepiece {
+  background-image: url("imgs/onepiece.jpg");
+}
+
+.bleach {
+  background-image: url("imgs/bleach.jpg");
+}
