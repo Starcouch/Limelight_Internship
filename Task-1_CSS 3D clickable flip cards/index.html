@@ -1,166 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Cards</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+    <!-- YOUR CSS -->
+    <link rel="stylesheet" href="task1.css">
+</head>
+
+<body>
 <div class="wrapper">
-        <div class="card">
-            <input type="checkbox" id="card1" class="more" aria-hidden="true">
-            <div class="content">
-                <div class="front" style="background-image: url('https://m.media-amazon.com/images/M/MV5BZTNjOWI0ZTAtOGY1OS00ZGU0LWEyOWYtMjhkYjdlYmVjMDk2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg')">
-                    <div class="inner">
-                        <h2>Naruto</h2>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </div>
-                        <label for="card1" class="button" aria-hidden="true">
-                            Details
-                        </label>
-                    </div>
-                </div>
-                <div class="back">
-                    <div class="inner">
-                        <div class="info">
-                            <span>5</span>
-                            <div class="icon">
-                                <i class="fas fa-users"></i>
-                                <span>episodes</span>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <span>4</span>
-                            <div class="icon">
-                                <i class="fas fa-door-open"></i>
-                                <span>seasons</span>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <span>3</span>
-                            <div class="icon">
-                                <i class="fas fa-bed"></i>
-                                <span>debut</span>
-                            </div>
-                        </div>
-                        <div class="description">
-                            <p>Naruto Uzumaki is a young ninja striving to become the strongest and earn the respect of his village while carrying a powerful secret within him.</p>
-                        </div>
-                        <div class="author">Masashi Kishimoto</div>
-                        <div class="Rating">8.4 IMDb</div>
-                        <label for="card1" class="button return" aria-hidden="true">
-                            Back
-                            <i class="fas fa-arrow-left"></i>
-                        </label>
-                    </div>
+
+    <!-- Naruto -->
+    <div class="card">
+        <input type="checkbox" id="card1" class="more">
+        <div class="content">
+            <div class="front" style="background-image: url('https://m.media-amazon.com/images/M/MV5BZTNjOWI0ZTAtOGY1OS00ZGU0LWEyOWYtMjhkYjdlYmVjMDk2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg')">
+                <div class="inner">
+                    <h2>Naruto</h2>
+                    <label for="card1" class="button">Details</label>
                 </div>
             </div>
-        </div>
-        <div class="card">
-            <input type="checkbox" id="card2" class="more">
-            <div class="content">
-                <div class="front" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMTNjNGU4NTUtYmVjMy00YjRiLTkxMWUtNzZkMDNiYjZhNmViXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg')">
-                    <div class="inner">
-                        <h2>One Piece</h2>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <i class="far fa-star"></i>
-                        </div>
-                        <label for="card2" class="button" aria-hidden="true">
-                            Details
-                        </label>
+
+            <div class="back">
+                <div class="inner">
+                    <div class="info"><span>220</span> Episodes</div>
+                    <div class="info"><span>5</span> Seasons</div>
+                    <div class="info"><span>2002</span> Debut</div>
+
+                    <div class="description">
+                        <p>
+                            Naruto Uzumaki is a young ninja who dreams of becoming Hokage, the strongest leader of his village. Despite being feared for the Nine-Tails fox sealed within him, he works hard to gain recognition and protect his friends.
+                        </p>
                     </div>
-                </div>
-                <div class="back">
-                    <div class="inner">
-                        <div class="info">
-                            <span>1155</span>
-                            <div class="icon">
-                                <i class="fas fa-users"></i>
-                                <span>episodes</span>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <span>1</span>
-                            <div class="icon">
-                                <i class="fas fa-door-open"></i>
-                                <span>seasons</span>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <span>1999</span>
-                            <div class="icon">
-                                <i class="fas fa-bed"></i>
-                                <span>debut</span>
-                            </div>
-                        </div>
-                        <div class="description">
-                            <p>
-                                Monkey D. Luffy, a pirate with rubber powers, forms the Straw Hat crew and sails the Grand Line, battling rivals and the World Government on a quest for the legendary treasure One Piece and the title of Pirate King.</p>
-                        </div>
-                        <div class="author">Eiichirô Oda</div>
-                        <div class="Rating">9.0 IMDb</div>
-                        <label for="card2" class="button return" aria-hidden="true">
-                            Back
-                            <i class="fas fa-arrow-left"></i>
-                        </label>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <input type="checkbox" id="card3" class="more">
-            <div class="content">
-                <div class="front" style="background-image: url('https://m.media-amazon.com/images/M/MV5BOWQwOWY5NTUtMjAyZi00YjQzLTkwODgtNmQwZjU1MGIzZDhjXkEyXkFqcGc@._V1_.jpg')">
-                    <div class="inner">
-                        <h2>Bleach</h2>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <label for="card3" class="button" aria-hidden="true">
-                            Details
-                        </label>
-                    </div>
-                </div>
-                <div class="back">
-                    <div class="inner">
-                        <div class="info">
-                            <span>8</span>
-                            <div class="icon">
-                                <i class="fas fa-users"></i>
-                                <span>episodes</span>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <span>7</span>
-                            <div class="icon">
-                                <i class="fas fa-door-open"></i>
-                                <span>seasons</span>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <span>5</span>
-                            <div class="icon">
-                                <i class="fas fa-bed"></i>
-                                <span>debut</span>
-                            </div>
-                        </div>
-                        <div class="description">
-                            <p>High school student Ichigo Kurosaki, who has the ability to see ghosts, gains soul reaper powers from Rukia Kuchiki and sets out to save the world from "Hollows".</p>
-                        </div>
-                        <div class="author">Tite Kubo</div>
-                        <div class="Rating">8.2 IMDb</div>
-                        <label for="card3" class="button return" aria-hidden="true">
-                            Back
-                            <i class="fas fa-arrow-left"></i>
-                        </label>
-                    </div>
+
+                    <div class="author">Masashi Kishimoto</div>
+                    <div class="Rating">8.4 IMDb</div>
+
+                    <label for="card1" class="button return">Back</label>
                 </div>
             </div>
         </div>
     </div>
-    
+
+    <!-- One Piece -->
+    <div class="card">
+        <input type="checkbox" id="card2" class="more">
+        <div class="content">
+            <div class="front" style="background-image: url('https://m.media-amazon.com/images/M/MV5BMTNjNGU4NTUtYmVjMy00YjRiLTkxMWUtNzZkMDNiYjZhNmViXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg')">
+                <div class="inner">
+                    <h2>One Piece</h2>
+                    <label for="card2" class="button">Details</label>
+                </div>
+            </div>
+
+            <div class="back">
+                <div class="inner">
+                    <div class="info"><span>1000+</span> Episodes</div>
+                    <div class="info"><span>1</span> Season</div>
+                    <div class="info"><span>1999</span> Debut</div>
+
+                    <div class="description">
+                        <p>
+                            Monkey D. Luffy, a pirate with rubber powers, sets out to find the legendary treasure "One Piece" and become the Pirate King. Along the way, he builds a loyal crew and faces powerful enemies across the Grand Line.
+                        </p>
+                    </div>
+
+                    <div class="author">Eiichirō Oda</div>
+                    <div class="Rating">9.0 IMDb</div>
+
+                    <label for="card2" class="button return">Back</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bleach -->
+    <div class="card">
+        <input type="checkbox" id="card3" class="more">
+        <div class="content">
+            <div class="front" style="background-image: url('https://m.media-amazon.com/images/M/MV5BOWQwOWY5NTUtMjAyZi00YjQzLTkwODgtNmQwZjU1MGIzZDhjXkEyXkFqcGc@._V1_.jpg')">
+                <div class="inner">
+                    <h2>Bleach</h2>
+                    <label for="card3" class="button">Details</label>
+                </div>
+            </div>
+
+            <div class="back">
+                <div class="inner">
+                    <div class="info"><span>366</span> Episodes</div>
+                    <div class="info"><span>16</span> Seasons</div>
+                    <div class="info"><span>2004</span> Debut</div>
+
+                    <div class="description">
+                        <p>
+                            Ichigo Kurosaki, a teenager with the ability to see spirits, gains the powers of a Soul Reaper. He protects the living world from evil spirits known as Hollows while uncovering deeper mysteries about his own powers.
+                        </p>
+                    </div>
+
+                    <div class="author">Tite Kubo</div>
+                    <div class="Rating">8.2 IMDb</div>
+
+                    <label for="card3" class="button return">Back</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
